@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'EveryTypeOfCat';
+    src: url('./../fonts/Meta\ Courage\ TTF.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'EveryTypeOfCat', sans-serif;
+}
+
+h1 {
+    filter: drop-shadow(2px 2px 2px rgba(853, 253, 253, 115));
+    color: green;
+    font-family: 'EveryTypeOfCat', sans-serif;
+    font-size: 40px;
+}
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    overflow: hidden;
+    margin-top: -50px;
+}
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./../images/background.png') no-repeat center center/cover;
+    z-index: -1;
+}
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+.cta:hover {
+    background: #ffcccb;
+}
+.content-section {
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.494);
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 0 auto;
+    position: absolute; 
+    bottom: 70px; 
+    left: 0; 
+    right: 0;
+    color: black
+}
+
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    margin-top: -200px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #0ff);
+    animation: pulse 2s infinite alternate;
+    position: relative;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 10px red); }
+    100% { transform: scale(1.15); filter: drop-shadow(0 0 20px black); }
+}
+
+@media screen and (min-width: 768px) {
+    .logo-brand {
+        width: 300px;
+    }
+}
+
+footer {
+    color: white;
+    font-size: 12px;   
+}
+
+.footer-carousel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: green;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.carousel-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+/* Automatic sliding effect */
+@keyframes slideNews {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 400%;
+    animation: slideNews 12s infinite ease-in-out;
+}
+
+#playButton {
+    position: relative;
+
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

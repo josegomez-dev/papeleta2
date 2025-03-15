@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partido Político | Costa Rica</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="parallax-bg"></div>
+        <!-- <img class="logo-brand" src="./images/logo.webp" alt=""> -->
+        <!-- <h1 id="title">El Futuro es Ahora</h1> -->
+        <div class="logo-container">
+            <img src="./images/logo.webp" alt="Logo" class="logo">
+        </div>
+    </header>
+    
+    <section id="contacto" class="content-section">
+        <h1>Únete a Nosotros</h1>
+        <p>Caminemos juntos <br/> hacia un nuevo destino.</p>
+        <button id="playButton">Ver Video <b>Papeleta #2</b></button>
+    </section>
+<!-- 
+    <diV>
+        <img style="width: 100%; max-width: 400px; margin-top: -150px;" src="./images/wa.jpg" alt="">
+    </diV> -->
+
+    <div id="videoContainer">
+        <video id="myVideo" controls>
+            <source src="./video/papeleta2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <footer>
+        <div class="footer-carousel">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">⚠️ Atención vecinos de Grecia</div>
+                    <div class="carousel-slide">🏡 San Vicente</div>
+                    <div class="carousel-slide">🍃 Rincón de Arias</div>
+                    <div class="carousel-slide">⛲️ Grecia Centro</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            let video = document.getElementById("myVideo");
+
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+
+            video.play();
+        });
+    </script>
+</body>
+</html>
