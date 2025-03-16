@@ -72,14 +72,14 @@ h1 {
 .logo-container {
     position: relative;
     display: inline-block;
-    margin-top: -200px;
+    margin-top: -250px;
 }
 
 .logo {
     width: 150px;
     height: auto;
     filter: drop-shadow(0 0 10px #0ff);
-    animation: pulse 2s infinite alternate;
+    animation: pulse 1s infinite alternate;
     position: relative;
     border-radius: 50%;
 }
